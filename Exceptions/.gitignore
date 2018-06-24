@@ -1,0 +1,13 @@
+/CantinaExistenteException.class
+/CantinaNaoExistenteException.class
+/CursoExistenteException.class
+/CursoNaoExistenteException.class
+/DisciplinaCadastradaException.class
+/DisciplinaNaoCadastradaException.class
+/DisciplinaNaoEncontradaException.class
+/MaterialExistenteException.class
+/MaterialNaoExistenteException.class
+/MensalidadeIncorretaException.class
+/PessoaExistenteException.class
+/PessoaNaoEncontradaException.class
+/NenhumaDisciplinaCadastradaException.class

@@ -161,12 +161,12 @@ public class Programa {
 							System.out.println("Qual o endereco do curso? ");
 							String endereco = in.nextLine();
 							System.out.println("Quantas salas tem o curso? ");
-							double qtdSalas = in.nextDouble());
+							double qtdSalas = in.nextDouble();
 							System.out.println("Quantos setores tem o curso? ");
-							double setores = in.nextDouble());
+							double setores = in.nextDouble();
 							System.out.println("Qual o nome do seu curso?");
 							String nome = in.nextLine();
-							Cantina curso = new Curso(nome, endereco, qtdSalas, setores);
+							Curso curso = new Curso(nome, endereco, qtdSalas, setores);
 							cc.inserirCurso(curso);
 							System.out.println("O curso " + curso.getNome() + " foi inserido no sistema.");
 							System.out.println("");	
@@ -513,7 +513,7 @@ public class Programa {
 		catch (CursoExistenteException x) {
 			System.out.println(x.getMessage());
 		}
-		catch (CursoNaoExistenteException x) { //calma que o erro ir� sumir a medida que fomos criando os codigos
+		catch (CursoNaoExistenteException x) { //calma que o erro ira sumir a medida que fomos criando os codigos
 			System.out.println(x.getMessage());
 		}
 		catch (DisciplinaCadastradaException x) {
