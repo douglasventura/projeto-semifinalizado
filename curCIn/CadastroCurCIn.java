@@ -107,8 +107,8 @@ public class CadastroCurCIn {
 		cadastroPessoa.inserirPessoa(pessoa);
 	}
 	
-	public boolean procurarPessoa(String nomeAluno) {
-		return cadastroPessoa.procurarPessoa(nomeAluno);
+	public boolean procurarPessoa(String nomePessoa) {
+		return cadastroPessoa.procurarPessoa(nomePessoa);
 	}
 	
 	public void atualizarPessoa(Pessoa novo) throws PessoaNaoEncontradaException{

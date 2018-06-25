@@ -1,6 +1,6 @@
 package Pessoa;
 
-import Cantina.Cantina;
+import Pessoa.Pessoa;
 
 public class RepositorioPessoaLista implements RepositorioPessoa{
 	private Pessoa pessoa;
@@ -22,7 +22,7 @@ public class RepositorioPessoaLista implements RepositorioPessoa{
 	}
 	
 	public boolean procurar(String pessoa) {
-		if (this.pessoa!=null && this.pessoa.equals(pessoa)) {
+		if (this.pessoa!=null && this.pessoa.getNome().equals(pessoa)) {
 			return true;
 		}
 		if (this.proximo != null) {
@@ -33,7 +33,7 @@ public class RepositorioPessoaLista implements RepositorioPessoa{
 	}
 	
 	public void atualizar(Pessoa novo) {
-		if (this.pessoa == novo) {
+		if (this.pessoa.getNome().equals(novo.getNome())) {
 			this.pessoa = novo;
 		} else {
 			this.proximo.atualizar(novo);
@@ -41,7 +41,7 @@ public class RepositorioPessoaLista implements RepositorioPessoa{
 	}
 	
 	public void remover(String pessoa){
-		if (this.pessoa!=null && this.pessoa.equals(pessoa)) {
+		if (this.pessoa.getNome()!=null && this.pessoa.getNome().equals(pessoa)) {
 			this.pessoa = this.proximo.pessoa;
 			this.proximo = this.proximo.proximo;
 		}

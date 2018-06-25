@@ -1,6 +1,6 @@
 package Pessoa;
 
-import Cantina.Cantina;
+import Pessoa.Pessoa;
 import Exceptions.*;
 
 public class CadastroPessoa {
