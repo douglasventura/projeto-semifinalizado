@@ -28,13 +28,19 @@ public class RepositorioDisciplinaArray implements RepositorioDisciplina {
 	}
 
 	public void remover(String nomeDisciplina) {
-		for (int i = 0; i < contador; i++) {
-			if (array[i].getNome().equals(nomeDisciplina)) {
-				array[i] = null;
-				for (; i < contador; i++) {
-					array[i] = array[i + 1];
-				}
-				array[contador - 1] = null;
+		int aux = 0;
+		int aux2 = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (this.array[i].getNome().equals(nomeDisciplina)) {
+				this.array[i] = null;
+				aux2 = i;
+			}
+		}
+		Disciplina[] arrayAux = new Disciplina[array.length - 1];
+		for (int i = 0; i < array.length; i++) {
+			if (i != aux2) {
+				arrayAux[aux] = this.array[i];
+				aux++;
 			}
 		}
 	}
@@ -49,11 +55,11 @@ public class RepositorioDisciplinaArray implements RepositorioDisciplina {
 		return aux;
 	}
 
-	public void atualizarMensalidade(Disciplina disciplina) {
+	public void atualizarMensalidade(Disciplina disciplina)  {
 		boolean aux = true;
 		for (int i = 0; i < array.length && aux; i++) {
 			if (this.array[i] != null && this.array[i].getNome().equals(disciplina.getNome())) {
-				this.array[i].setMensalidade(disciplina.getMensalidade());
+				this.array[i].setMensalidade(disciplina.getMensalidade()); 
 				aux = false;
 			}
 		}

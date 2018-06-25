@@ -39,7 +39,7 @@ public class RepositorioDisciplinaLista implements RepositorioDisciplina {
 		}
 	}
 	
-	public void atualizarMensalidade(Disciplina disciplina) {
+	public void atualizarMensalidade(Disciplina disciplina)  {
 		if (this.atual.getNome().equals(disciplina.getNome())) {
 			this.atual.setMensalidade(disciplina.getMensalidade());
 		} else {
@@ -57,7 +57,7 @@ public class RepositorioDisciplinaLista implements RepositorioDisciplina {
 		} else {
 			aux2 = false;
 		}
-		if (aux2) {
+		if (this.prox != null && aux2) {
 			this.prox.dados();
 		}
 		return aux;

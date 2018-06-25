@@ -244,7 +244,7 @@ public class Programa {
 					System.out.println("3 - Alterar a mensalidade de uma disciplina");
 					System.out.println("4 - Remover uma disciplina");
 					int opcaoDisciplina = Integer.parseInt(in.nextLine());
-
+					
 					if (opcaoDisciplina == 1) {
 						System.out.println("Voce escolheu cadastrar uma disciplina.");
 						System.out.println("Digite o nome da disciplina");
@@ -262,34 +262,26 @@ public class Programa {
 								if (arrayAux[i] != null) {
 									System.out.printf("%s - R$%.2f %n", arrayAux[i].getNome(), arrayAux[i].getMensalidade());
 								}
-							}
-						} else {
-							System.out.println("Nenhuma disciplina foi cadastrada ainda.");
+							}	
+							System.out.println("");
 						}
-						System.out.println("");
+						
 					} else if (opcaoDisciplina == 3) {
 						System.out.println("Digite o nome da disciplina que deseja alterar a mensalidade");
 						String nomeDisciplina = in.nextLine();
-						if (cc.procurarDisciplina(nomeDisciplina)) {
-							System.out.println("Digite o novo valor da mensalidade");
-							double mensalidadeNova = Double.parseDouble(in.nextLine());
-							Disciplina disciplina = new Disciplina(nomeDisciplina, mensalidadeNova);
-							cc.atualizarMensalidade(disciplina);
-							System.out.println("Mensalidade atualizada com sucesso!");
-							System.out.println("");
-						} else {
-							System.out.println("Disciplina nao encontrada");
-							System.out.println("");
-						}
-
+						System.out.println("Digite o novo valor da mensalidade");
+						double mensalidadeNova = Double.parseDouble(in.nextLine());
+						Disciplina disciplina = new Disciplina(nomeDisciplina, mensalidadeNova);
+						cc.atualizarMensalidade(disciplina);
+						System.out.println("Mensalidade atualizada com sucesso!");
+						System.out.println("");
+						
 					} else if (opcaoDisciplina == 4) {
 						System.out.println("Digite o nome da disciplina que deseja remover");
 						String nomeDisciplina = in.nextLine();
-						if (cc.procurarDisciplina(nomeDisciplina)) {
-							cc.removerDisciplina(nomeDisciplina);
-							System.out.println("Disciplina removida com sucesso!");
-							System.out.println("");
-						}
+						cc.removerDisciplina(nomeDisciplina);
+						System.out.println("Disciplina removida com sucesso!");
+						System.out.println("");
 					}
 				}
 

@@ -53,7 +53,7 @@ public class CadastroDisciplina {
 	}
 	
 	public Disciplina[] dados() throws NenhumaDisciplinaCadastradaException {
-		if (repositorioDisciplina.dados().length > 0) {
+		if (repositorioDisciplina.dados() != null) {
 			return repositorioDisciplina.dados();
 		} else {
 			throw new NenhumaDisciplinaCadastradaException();
